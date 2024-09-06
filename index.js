@@ -18,7 +18,7 @@ try {
   const start = getInsertIndex(index, jsonData.length);
   jsonData.splice(start, 0, JSON.parse(item));
 
-  fs.writeFileSync(file, JSON.stringify(jsonData, null, 2));
+  fs.writeFileSync(file, JSON.stringify(jsonData, null, 2) + '\n');
 } catch (error) {
   core.setFailed(error.message);
 }
