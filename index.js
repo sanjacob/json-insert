@@ -9,7 +9,7 @@ const getInsertIndex = (index, len) => {
 
 try {
   const file = core.getInput('file');
-  const index = core.getInput('index');
+  const index = parseInt(core.getInput('index'), 10);
   const item = core.getInput('item');
 
   const data = fs.readFileSync(file, 'utf8');
