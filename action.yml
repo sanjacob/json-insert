@@ -1,0 +1,21 @@
+name: 'JSON List Insert'
+description: 'Insert an object into a JSON list'
+branding:
+  icon: 'list'
+  color: 'green'
+
+inputs:
+  file:
+    description: 'File containing the list'
+    required: true
+  index:
+    description: 'Index where to insert'
+    required: true
+    default: -1
+  item:
+    description: 'JSON item to insert'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'index.js'
