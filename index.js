@@ -16,8 +16,6 @@ try {
   const jsonData = JSON.parse(data);
 
   const start = getInsertIndex(index, jsonData.length);
-  console.log("Splicing at " + start)
-  console.log(jsonData.length)
   jsonData.splice(start, 0, JSON.parse(item));
 
   fs.writeFileSync(file, JSON.stringify(jsonData, null, 2));
